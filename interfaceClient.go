@@ -140,7 +140,9 @@ func (c *IClient) sendDingInterfaceMsg(url string, msg any) error {
 	if err != nil {
 		return err
 	}
-	log.Printf("发送钉钉接口消息后，收到钉钉的回复: %v\n", string(respByte))
+	if Debug {
+		log.Printf("发送钉钉接口消息后，收到钉钉的回复: %v\n", string(respByte))
+	}
 	return nil
 }
 
