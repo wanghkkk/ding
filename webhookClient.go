@@ -85,7 +85,7 @@ func sendDingWebhookMsg(url string, msg any) error {
 	if err != nil {
 		return err
 	}
-	log.Printf("发送webhook消息，收到钉钉的回复: %v\n", respByte)
+	log.Printf("发送钉钉webhook消息后，收到钉钉的回复: %v\n", string(respByte))
 	return nil
 }
 
