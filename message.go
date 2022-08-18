@@ -23,6 +23,11 @@ var (
 	Debug = false
 )
 
+// OpenDebug 开启debug模式，开启后会输出钉钉返回的消息
+func OpenDebug() {
+	Debug = true
+}
+
 // Image 图片类型，接口方式发送机器人消息专有
 type Image struct {
 	PhotoURL string `json:"photoURL"`
